@@ -9,11 +9,20 @@ public class Fraction implements Comparable<Fraction>
     {
         this.num = num;
         this.denom = denom;
+        simplify();
     }
 
     @Override
     public int compareTo(Fraction o)
     {
+        int difference = this.num*o.denom - o.num*this.denom;
+        if (difference > 0);
+        else if(difference < 0) return -1;
         return 0;
+    }
+
+    private void simplify ()
+    {
+        
     }
 }
